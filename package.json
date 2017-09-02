@@ -8,8 +8,8 @@
   },
   "main": "./dist/main.js",
   "scripts": {
-    "start": "node ./dist/main.js",
-    "watch": "nodemon ./dist/main.js",
+    "start": "ts-node ./src/main.ts",
+    "watch": "nodemon ./src/main.ts",
     "test": "jest",
     "test:watch": "jest --watchAll",
     "lint:js": "eslint **/*.js",
@@ -27,6 +27,8 @@
     "superagent": "^2.3.0"
   },
   "devDependencies": {
+    "@types/jest": "^20.0.8",
+    "@types/node": "^8.0.26",
     "del": "^3.0.0",
     "eslint": "^4.5.0",
     "eslint-plugin-import": "^2.7.0",
@@ -35,12 +37,25 @@
     "gulp-typescript": "^3.2.2",
     "jest": "^20.0.4",
     "jest-plugin-context": "^1.7.0",
+    "ts-jest": "^20.0.14",
+    "ts-node": "^3.3.0",
     "tslint": "^5.7.0",
     "typescript": "^2.5.2"
   },
   "jest": {
     "setupFiles": [
       "jest-plugin-context/setup"
+    ],
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
     ]
   }
 }

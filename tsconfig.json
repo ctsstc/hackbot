@@ -1,10 +1,9 @@
 {
-  "files": [
-      "./src/commands/*.ts",
-      "./src/library/*.ts"
-  ],
-  "compilerOptions": {
-      "noImplicitAny": true,
-      "target": "es6"
-  }
+    "files": [
+        "./src/**/*.ts"
+    ],
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "target": "es6"
+    }
 }
