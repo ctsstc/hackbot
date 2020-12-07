@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "jest": "^20.0.4",
-    "jest-plugin-context": "^1.7.0"
+    "jest-plugin-context": "^2.9.0"
   },
   "jest": {
     "setupFiles": [
